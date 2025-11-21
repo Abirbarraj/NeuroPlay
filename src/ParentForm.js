@@ -1,5 +1,5 @@
 import React from 'react';
-import './ParentForm.css';
+import './styles/components/ParentForm.css';
 
 function ParentForm({ onNext }) {
   const handleSubmit = (e) => {

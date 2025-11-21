@@ -1,7 +1,7 @@
 // src/WelcomeBunny.js
 import React from 'react';
 import bunny from './images/bunny.png';
-import './WelcomeBunny.css';
+import './styles/components/WelcomeBunny.css';
 
 function WelcomeBunny() {
   return (
