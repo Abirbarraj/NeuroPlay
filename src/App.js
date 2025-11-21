@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ParentForm from './ParentForm';
 import WelcomeBunny from './WelcomeBunny';
+import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('form');

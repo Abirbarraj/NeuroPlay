@@ -1,0 +1,50 @@
+.welcome-bunny {
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+}
+
+.welcome-bunny .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.welcome-bunny h1 {
+  font-family: 'Comic Neue', cursive;
+  font-size: clamp(3rem, 8vw, 5rem);
+  background: linear-gradient(90deg, #D8BFD8, #B2F2BB, #FFE5B4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.welcome-bunny p {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  color: #444;
+  margin: 25px 0;
+}
+
+/* Bunny specific styles */
+.bunny {
+  width: clamp(180px, 40vw, 300px);
+  height: auto;
+  animation: bounce 4s infinite ease-in-out;
+  margin: 20px 0;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Responsive for WelcomeBunny */
+@media (max-width: 768px) {
+  .welcome-bunny .container {
+    min-height: 70vh;
+  }
+}

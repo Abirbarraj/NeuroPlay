@@ -1,0 +1,136 @@
+.parent-form {
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+}
+
+.parent-form .container {
+  position: relative;
+  z-index: 1;
+}
+
+.parent-form h1 {
+  font-family: 'Comic Neue', cursive;
+  font-size: clamp(3rem, 8vw, 5rem);
+  background: linear-gradient(90deg, #D8BFD8, #B2F2BB, #FFE5B4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.parent-form p {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  color: #444;
+  margin: 25px 0;
+}
+
+/* Form specific styles */
+.mchat-form {
+  position: relative;
+  z-index: 1;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+  padding: 25px;
+  background: rgba(240, 248, 255, 0.7);
+  border-radius: 35px;
+}
+
+.info-input {
+  width: 100%;
+  padding: 18px 22px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.05);
+  outline: none;
+}
+
+.info-input:focus {
+  box-shadow: 0 0 0 5px rgba(178,242,187,.4);
+}
+
+/* Questions */
+.question-block {
+  background: rgba(240, 248, 255, 0.7);
+  padding: 25px;
+  border-radius: 35px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.question-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.question-text {
+  font-size: 1.55rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.yes-no-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.choice {
+  cursor: pointer;
+}
+
+.choice input {
+  opacity: 0;
+  position: absolute;
+}
+
+.choice span {
+  display: block;
+  padding: 12px 40px; 
+  font-size: 1.6rem; 
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.choice.yes span { 
+  background: #B2F2BB; 
+  color: #155724; 
+}
+
+.choice.no span { 
+  background: #FFC5D0; 
+  color: #721c24; 
+}
+
+.choice input:checked + span {
+  transform: scale(1.15);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+/* Responsive for ParentForm */
+@media (max-width: 768px) {
+  .choice span {
+    padding: 15px 40px;
+    font-size: 1.6rem;
+  }
+  
+  .yes-no-buttons {
+    gap: 30px;
+  }
+  
+  .info-section,
+  .question-block {
+    padding: 20px;
+  }
+}
