@@ -663,3 +663,137 @@ body {
   background: linear-gradient(90deg, #FFC5D0, #B2F2BB);
   transition: width 0.3s ease;
 }
+
+/* Bunny speaking styles */
+.bunny-container {
+  position: relative;
+  display: inline-block;
+}
+
+.bunny-container.speaking .bunny {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.speaking-indicator {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+.bunny-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+.bunny-preview {
+  text-align: center;
+}
+
+.preview-bunny {
+  width: 120px;
+  height: auto;
+}
+
+/* Enhanced speech bubble */
+.speech-bubble {
+  background: white;
+  padding: 20px;
+  border-radius: 25px;
+  border: 3px solid #B2F2BB;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* Disabled button states */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn:disabled:hover {
+  transform: none !important;
+  box-shadow: 0 15px 35px rgba(255,193,208,.5) !important;
+}
+
+/* Preview styles for instruction */
+.preview-text {
+  flex: 1;
+}
+
+/* Detection status styles */
+.detection-status-info {
+  background: #f0f9ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  border-left: 4px solid #3b82f6;
+}
+
+.status-ready {
+  color: #059669;
+  font-weight: bold;
+}
+
+.status-loading {
+  color: #d97706;
+  font-weight: bold;
+}
+
+.detection-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d97706;
+}
+
+.waiting-indicator {
+  color: #6b7280;
+}
+
+.technical-details {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.technical-details h4 {
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+/* Enhanced detection stats */
+.detection-stats .stat {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.detection-stats .stat-label {
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.detection-stats .stat-value {
+  font-weight: bold;
+  color: #1f2937;
+  font-size: 0.9rem;
+}

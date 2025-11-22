@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import ResponseToNameGame from './ResponseToNameGame';
 
 function GameSuite({ onComplete }) {
-  const [currentGame, setCurrentGame] = useState(0);
+  const [currentGame] = useState(0);
   const [gameResults, setGameResults] = useState({});
   const [childName, setChildName] = useState('');
 
