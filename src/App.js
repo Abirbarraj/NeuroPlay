@@ -4,6 +4,7 @@ import ParentForm from './components/ParentForm';
 import WelcomeBunny from './components/WelcomeBunny'; 
 import GameSuite from './components/Games/GameSuite';
 import ResultsScreen from './components/ResultsScreen';
+import AppDora from './AppDora'; 
 import './styles/App.css';
 
 function App() {
@@ -26,9 +27,11 @@ function App() {
       {currentPage === 'bunny' && (
         <WelcomeBunny onNext={() => setCurrentPage('games')} />
       )}
-      
       {currentPage === 'games' && (
-        <GameSuite onComplete={() => setCurrentPage('results')} />
+        <GameSuite onComplete={() => setCurrentPage('dora')} />
+      )}
+      {currentPage === 'dora' && (
+        <AppDora onNext={() => setCurrentPage('results')} />
       )}
       
       {currentPage === 'results' && <ResultsScreen />}

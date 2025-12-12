@@ -1,0 +1,56 @@
+/* src/styles-dora/dora-pointing.css   ← keep the original name */
+
+/* Reset default browser styles globally   */
+/* ======================================== */
+html, body {
+  margin: 0;                  
+  padding: 0;                 
+  min-height: 100%;           
+  /* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */
+  /* REMOVED background-color from here so it stops bleeding */
+  box-sizing: border-box;     
+  overflow-x: hidden;
+}
+
+/* ======================================== */
+/* Background for the whole app – REMOVED */
+/* ======================================== */
+body {
+  /* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */
+  /* REMOVED background-color from here too */
+  font-family: Arial, sans-serif;
+}
+
+/* ======================================== */
+/* Utility class – NOW THIS IS THE ONLY PLACE WITH ORANGE */
+/* ======================================== */
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  
+  background-color: #d4e1cd;   /* ←←←←←←←←←←←←←←←←←←←←←←←←←← */
+  /* ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←← */
+  /* ORANGE BACKGROUND MOVED HERE — ONLY AFFECTS DORA GAME */
+  min-height: 100vh;           /* makes it fill the whole screen */
+}
+
+/* ======================================== */
+/* Global button styling                     */
+/* ======================================== */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Global image styling */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Everything else stays exactly the same */
