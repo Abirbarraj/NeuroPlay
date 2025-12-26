@@ -5,6 +5,9 @@ import GameSuite from './components/Games/GameSuite';
 import ResultsScreen from './components/ResultsScreen';
 import AppDora from './AppDora'; 
 import OverstimulatingGameWithTimer from './OverstimulatingGame';
+import ImitationGame from './components/Games/ImitationGame';
+import BlowOutCandles from './components/Games/BlowOutCandles';
+
 import './styles/App.css';
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
     if (savedData) console.log('Found saved screening data');
   }, []);
 
+  useEffect(() => console.log("PAGE:", currentPage), [currentPage]);
+
+
   return (
     <>
       {currentPage === 'form' && (
@@ -24,7 +30,13 @@ function App() {
         <WelcomeBunny onNext={() => setCurrentPage('games')} />
       )}
       {currentPage === 'games' && (
-        <GameSuite onComplete={() => setCurrentPage('dora')} />
+        <GameSuite onComplete={() => setCurrentPage('candles')} />
+      )}
+      {currentPage === 'candles' && (
+        <BlowOutCandles onComplete={() => setCurrentPage('imitation')} />  // ✅ FIXED!
+      )}
+      {currentPage === 'imitation' && (
+        <ImitationGame onComplete={() => setCurrentPage('dora')} />  // ✅ FIXED!
       )}
       {currentPage === 'dora' && (
         <AppDora onNext={() => setCurrentPage('overstim')} />
@@ -35,6 +47,7 @@ function App() {
       {currentPage === 'results' && <ResultsScreen />}
     </>
   );
+  
 }
 
 export default App;
