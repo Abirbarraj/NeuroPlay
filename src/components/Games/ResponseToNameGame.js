@@ -65,8 +65,8 @@ function ResponseToNameGame({ onComplete }) {
       const kidVoice = voices.find(voice => 
         voice.name.toLowerCase().includes('child') || 
         voice.name.toLowerCase().includes('kid') ||
-        voice.name.toLowerCase().includes('zira') || // Windows female voice
-        voice.name.toLowerCase().includes('samantha') // Mac voice
+        voice.name.toLowerCase().includes('zira') || 
+        voice.name.toLowerCase().includes('samantha') 
       );
       if (kidVoice) {
         speech.voice = kidVoice;
@@ -83,16 +83,15 @@ function ResponseToNameGame({ onComplete }) {
       window.speechSynthesis.speak(speech);
     } else {
       if (onEndCallback) {
-        setTimeout(onEndCallback, 1500); // Shorter fallback
+        setTimeout(onEndCallback, 1500); 
       }
     }
   };
 
   const playBouncyInstruction = (onComplete) => {
     const segments = [
-      { text: "Hello, I'm Bouncy!", duration: 800 },
-      { text: "We're going to play together!", duration: 800 },
-      { text: `If you are ${childName}, say yes!`, duration: 1200, speak: true }
+      { text: "Okay, let's start the game!", duration: 800, speak: true },
+      { text: `If you are ${childName}, say yes !`, duration: 1200, speak: true }
     ];
 
     let currentSegment = 0;
